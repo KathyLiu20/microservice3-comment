@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ccaec1e2-abf9-4b95-9d93-0eacecebf8b7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/758518e1-6c29-4193-b06f-c39a49a3e56a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/758518e1-6c29-4193-b06f-c39a49a3e56a.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/758518e1-6c29-4193-b06f-c39a49a3e56a/storage_v2/_src_/schema/mysql.osA4Bg.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/758518e1-6c29-4193-b06f-c39a49a3e56a/storage_v2/_src_/schema/mysql.osA4Bg.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/758518e1-6c29-4193-b06f-c39a49a3e56a/storage_v2/_src_/schema/sys.zb4BAA.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/758518e1-6c29-4193-b06f-c39a49a3e56a/storage_v2/_src_/schema/sys.zb4BAA.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup/Setup.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/setup/Setup.ipynb" afterDir="false" />
-    </list>
+    <list default="true" id="ccaec1e2-abf9-4b95-9d93-0eacecebf8b7" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,7 +22,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/../F22-Starter-Microservice/src/columbia_student_resource.py" root0="FORCE_HIGHLIGHTING" />
@@ -39,6 +31,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2FOm4btjaaL0PVHvj8iCYD8z3bP" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -75,6 +68,8 @@
       <workItem from="1664371315545" duration="5122000" />
       <workItem from="1667607646809" duration="6142000" />
       <workItem from="1667614683874" duration="49000" />
+      <workItem from="1668121800835" duration="308000" />
+      <workItem from="1668122181937" duration="30000" />
     </task>
     <servers />
   </component>

@@ -1,0 +1,3 @@
+varchar255
+time - datetime
+5 different comments for 5 people in a single post. 

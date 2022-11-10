@@ -13,7 +13,7 @@ app = Flask(__name__,
 CORS(app)
 
 
-@app.get("/post/a0001")
+@app.get("/comment/<post_id>/post")
 def get_post():
     #t = str(datetime.now())
     msg = {
@@ -28,8 +28,8 @@ def get_post():
     return result
 
 
-@app.route("/post/a0001/comment/", methods=["GET"])
-def get_comment(comment_id):
+@app.route("/comment/<post_id>/<comment_id>", methods=["GET"])
+def get_comment(post_id,comment_id):
 
     result = CommentResourceResource.get_by_key(comment_id)
 
