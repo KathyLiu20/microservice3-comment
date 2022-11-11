@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ccaec1e2-abf9-4b95-9d93-0eacecebf8b7" name="Changes" comment="" />
+    <list default="true" id="ccaec1e2-abf9-4b95-9d93-0eacecebf8b7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../F22-Starter-Microservice/src/application.py" beforeDir="false" afterPath="$PROJECT_DIR$/../F22-Starter-Microservice/src/application.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,6 +72,8 @@
       <workItem from="1667614683874" duration="49000" />
       <workItem from="1668121800835" duration="308000" />
       <workItem from="1668122181937" duration="30000" />
+      <workItem from="1668129333625" duration="2000" />
+      <workItem from="1668129549244" duration="881000" />
     </task>
     <servers />
   </component>

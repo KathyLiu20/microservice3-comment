@@ -14,10 +14,10 @@ CORS(app)
 
 
 @app.get("/comment/<post_id>/post")
-def get_post():
+def get_post(post_id):
     #t = str(datetime.now())
     msg = {
-        "photo id": "a0001",
+        "photo id": post_id,
         "user id": "a0001",
         "comment id": "a0001"
     }
@@ -28,7 +28,7 @@ def get_post():
     return result
 
 
-@app.route("/comment/<post_id>/<comment_id>", methods=["GET"])
+@app.route("/comment/<comment_id>", methods=["GET"])
 def get_comment(post_id,comment_id):
 
     result = CommentResourceResource.get_by_key(comment_id)
