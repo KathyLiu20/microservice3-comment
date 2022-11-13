@@ -5,9 +5,9 @@
     <option name="PARENT_ENVS" value="true" />
     <envs>
       <env name="PYTHONUNBUFFERED" value="1" />
-      <env name="DBHost" value="database-1.cxkifx2zagm9.us-east-1.rds.amazonaws.com" />
+      <env name="DBHost" value="localhost" />
       <env name="DBPW" value="990709wzj" />
-      <env name="DBUSER" value="admin" />
+      <env name="DBUSER" value="root" />
     </envs>
     <option name="SDK_HOME" value="" />
     <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />

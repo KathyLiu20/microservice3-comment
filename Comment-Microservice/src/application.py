@@ -2,6 +2,7 @@ from flask import Flask, Response, request
 from datetime import datetime
 import json
 from comment_resource import CommentResource
+from post_resource import PostResource
 from flask_cors import CORS
 
 # Create the Flask application object.
@@ -13,28 +14,29 @@ app = Flask(__name__,
 CORS(app)
 
 
-@app.get("/comment/<post_id>/post")
+@app.route("/comment/<post_id>/post", methods=["GET"])
 def get_post(post_id):
     #t = str(datetime.now())
-    msg = {
-        "photo id": post_id,
-        "user id": "a0001",
-        "comment id": "a0001"
-    }
+    result = PostResource.get_by_key(post_id)
 
-    # DFF TODO Explain status codes, content type, ... ...
-    result = Response(json.dumps(msg), status=200, content_type="application/json")
+   
+    if result:
+        rsp = Response(json.dumps(result,indent=4, sort_keys=True, default=str), status=200, content_type="application.json")
+    else:
+        rsp = Response("NOT FOUND", status=404, content_type="text/plain")
 
-    return result
+    return rsp
+
+
 
 
 @app.route("/comment/<comment_id>", methods=["GET"])
-def get_comment(post_id,comment_id):
+def get_comment(comment_id):
 
-    result = CommentResourceResource.get_by_key(comment_id)
+    result = CommentResource.get_by_key(comment_id)
 
     if result:
-        rsp = Response(json.dumps(result), status=200, content_type="application.json")
+        rsp = Response(json.dumps(result,indent=4, sort_keys=True, default=str), status=200, content_type="application.json")
     else:
         rsp = Response("NOT FOUND", status=404, content_type="text/plain")
 

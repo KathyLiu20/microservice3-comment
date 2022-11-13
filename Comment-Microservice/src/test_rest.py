@@ -4,7 +4,7 @@ import json
 
 def t1():
 
-    health_url = "http://127.0.0.1:5011/api/health"
+    health_url = "http://127.0.0.1:5011/comment/p0001/post"
 
     try:
         h_message = requests.get(health_url)
