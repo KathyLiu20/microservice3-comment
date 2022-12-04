@@ -10,7 +10,6 @@ class PostResource:
 
     @staticmethod
     def _get_connection():
-
         usr = os.environ.get("DBUSER")
         pw = os.environ.get("DBPW")
         h = os.environ.get("DBHOST")
@@ -26,7 +25,6 @@ class PostResource:
 
     @staticmethod
     def get_by_key(key):
-
         sql = "SELECT * FROM f22_databases.postcomment where post_id=%s";
         conn = PostResource._get_connection()
         cur = conn.cursor()
@@ -34,3 +32,13 @@ class PostResource:
         result = cur.fetchone()
 
         return result
+
+    @staticmethod
+    def post_by_info(pid, cid):
+        cid = str(cid)
+        sql = "update f22_databases.postcomment set comments=concat(comments,%s) where post_id = %s ";
+        val = (','+cid, pid)
+        conn = PostResource._get_connection()
+        cur = conn.cursor()
+        res = cur.execute(sql, val)
+        result = cur.fetchone()
