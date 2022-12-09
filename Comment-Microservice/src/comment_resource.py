@@ -36,10 +36,10 @@ class CommentResource:
         return result
 
     @staticmethod
-    def post_by_input(id, date, likes, text, user):
+    def post_by_input(comment, cid, date, likes):
         sql = "INSERT INTO f22_databases.comment (comment_id,date,likes,text,user_id) " \
               "VALUES (%s,%s,%s,%s,%s)";
-        val = (id, date, likes, text, user)
+        val = (cid, date, likes, comment['text'], comment['user_id'])
         conn = CommentResource._get_connection()
         cursor = conn.cursor()
         res = cursor.execute(sql,val)

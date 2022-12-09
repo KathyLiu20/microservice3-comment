@@ -1,11 +1,12 @@
-from flask import Flask, Response, request
+from flask import Flask, Response, request, jsonify
 from datetime import datetime
 import json
 from comment_resource import CommentResource
 from post_resource import PostResource
 from flask_cors import CORS
 import uuid
-
+import random
+import shortuuid
 # Create the Flask application object.
 app = Flask(__name__,
             static_url_path='/',
@@ -29,15 +30,17 @@ def get_post(post_id):
     return rsp
 
 
-@app.route("/comment/<content>", methods=["POST"])
-def post_comment(content):
+@app.route("/comment", methods=["POST"])
+def post_comment():
+    comment = request.get_json()
+    print(comment)
+    cid = str(shortuuid.ShortUUID().random(length=5))
+    likes = 0
     date = str(datetime.now())
-
-    cid = uuid.uuid1()
-    result = CommentResource.post_by_input(cid, date, likes=0, text=content, user='zw2781')
+    result = CommentResource.post_by_input(comment, cid, date, likes)
     pid = 'p0001'
-    p = PostResource.post_by_info(pid,cid)
-    return str(cid)
+    PostResource.post_by_info(cid, pid)
+    return jsonify({'success': True})
 
 
 @app.route("/comment/<comment_id>", methods=["GET"])

@@ -34,8 +34,7 @@ class PostResource:
         return result
 
     @staticmethod
-    def post_by_info(pid, cid):
-        cid = str(cid)
+    def post_by_info(cid,pid):
         sql = "update f22_databases.postcomment set comments=concat(comments,%s) where post_id = %s ";
         val = (','+cid, pid)
         conn = PostResource._get_connection()
