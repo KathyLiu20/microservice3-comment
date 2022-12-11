@@ -27,22 +27,21 @@ class CommentResource:
 
     @staticmethod
     def get_by_key(key):
-        sql = "SELECT * FROM f22_databases.comment where comment_id=%s";
+        sql = "SELECT * FROM f22_databases.comment where post_id=%s";
         conn = CommentResource._get_connection()
         cur = conn.cursor()
         res = cur.execute(sql, args=key)
-        result = cur.fetchone()
-
+        result = cur.fetchall()
         return result
 
     @staticmethod
     def post_by_input(comment, cid, date, likes):
-        sql = "INSERT INTO f22_databases.comment (comment_id,date,likes,text,user_id) " \
-              "VALUES (%s,%s,%s,%s,%s)";
-        val = (cid, date, likes, comment['text'], comment['user_id'])
+        sql = "INSERT INTO f22_databases.comment (comment_id,date,likes,text,user_id,post_id,poster_id,username) " \
+              "VALUES (%s,%s,%s,%s,%s,%s,%s,%s)";
+        val = (cid, date, likes, comment['text'], comment['user_id'], comment['post_id'], comment['poster_id'],
+               comment['username'])
         conn = CommentResource._get_connection()
         cursor = conn.cursor()
-        res = cursor.execute(sql,val)
-        result = cursor.fetchall()
+        res = cursor.execute(sql, val)
         conn.commit()
         cursor.close()
