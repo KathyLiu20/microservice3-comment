@@ -38,12 +38,8 @@ def post_comment():
 def get_comment(post_id):
     result = CommentResource.get_by_key(post_id)
 
-    if result:
-        rsp = Response(json.dumps(result, indent=4, sort_keys=True, default=str), status=200,
-                       content_type="application.json")
-    else:
-        rsp = Response("NOT FOUND", status=404, content_type="text/plain")
-
+    rsp = Response(json.dumps({'data': result}, indent=4, sort_keys=True, default=str), status=200,
+                   content_type="application.json")
     return rsp
 
 
