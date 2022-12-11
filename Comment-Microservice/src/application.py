@@ -34,9 +34,6 @@ def post_comment():
         return jsonify({'Failure': True})
 
 
-
-
-
 @app.route("/comment/<post_id>", methods=["GET"])
 def get_comment(post_id):
     result = CommentResource.get_by_key(post_id)
@@ -51,4 +48,4 @@ def get_comment(post_id):
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5011)
+    app.run(host="0.0.0.0", port=5012)
