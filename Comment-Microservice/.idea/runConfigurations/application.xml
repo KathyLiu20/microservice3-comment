@@ -4,14 +4,14 @@
     <option name="INTERPRETER_OPTIONS" value="" />
     <option name="PARENT_ENVS" value="true" />
     <envs>
+      <env name="DBHost" value="comment-database6156.cicxbvsdfbzb.us-east-1.rds.amazonaws.com" />
+      <env name="DBPW" value="comment6156" />
+      <env name="DBUSER" value="admin" />
       <env name="PYTHONUNBUFFERED" value="1" />
-      <env name="DBHost" value="localhost" />
-      <env name="DBPW" value="990709wzj" />
-      <env name="DBUSER" value="root" />
     </envs>
-    <option name="SDK_HOME" value="" />
+    <option name="SDK_HOME" value="$USER_HOME$/Desktop/CU/22F/6156-CloudComputing/F22-Starter-Microservice/venv/bin/python" />
     <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
-    <option name="IS_MODULE_SDK" value="true" />
+    <option name="IS_MODULE_SDK" value="false" />
     <option name="ADD_CONTENT_ROOTS" value="true" />
     <option name="ADD_SOURCE_ROOTS" value="true" />
     <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
