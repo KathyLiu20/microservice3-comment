@@ -12,9 +12,9 @@ class CommentResource:
 
     @staticmethod
     def _get_connection():
-        usr = os.environ.get("DBUSER", "root")
-        pw = os.environ.get("DBPW", "meimima.")
-        h = os.environ.get("DBHOST", "localhost")
+        usr = os.environ.get("DBUSER", "admin")
+        pw = os.environ.get("DBPW", "comment6156")
+        h = os.environ.get("DBHOST", "comment-database6156.cicxbvsdfbzb.us-east-1.rds.amazonaws.com")
 
         conn = pymysql.connect(
             user=usr,
