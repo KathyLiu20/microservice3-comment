@@ -23,10 +23,6 @@ def post_comment():
         cid = str(shortuuid.ShortUUID().random(length=5))
         likes = 0
         date = str(datetime.now())
-        ## post_id = comment['post_id']
-        ## poster_id = comment['poster_id']
-        ## text = comment['text']
-        ## username = comment['username']
         result = CommentResource.post_by_input(comment, cid, date, likes)
         return jsonify({'Success': True})
     except Exception as e:

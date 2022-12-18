@@ -1,8 +1,8 @@
-# F22-Starter-Microservice
+# Comment service
 
 ## Introduction
 
-This is a simple Flask based starter microservice for F22 Columbia classes.
+This is a Flask based microservice for comment.
 
 
 ## Setup
@@ -27,11 +27,10 @@ Select the file ```application.py``` in the directory ```./src``` in the file ex
 select "run." In the execution panel at the bottom of the screen, you should see messages about "running on ... ..."
 This indicates that the web application has started.
 
-Select the file ```tts.py``` and run it. The message will determine if your end-to-end test worked.
 
 
 ## Connecting to the Database
 
-The file ```columbia_student_resource.py``` is a simple, starter REST resource.
+The file ```comment_resource.py``` is a simple, starter REST resource.
 
 
